@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {# flash messages #}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    {# form #}
+    <div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+        <div class="card shadow p-4" style="width: 400px;">
+            <h2 class="text-center">Importer un fichier Excel</h2>
+            {{ form_start(form) }}
+                <div class="mb-3">
+                    {{ form_row(form.file, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Importer</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+
