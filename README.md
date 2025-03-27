@@ -1,6 +1,11 @@
 ## Step running project ##
+- Plase install composer & npm
+- Please install (if not) symfony cli
+https://symfony.com/download
 
 # Clone the project
+- git clone git@github.com:mastermirado/import_excel.git
+- cd import_excel
 
 # Run composer install
 
