@@ -45,17 +45,12 @@ class ImportController extends AbstractController
                             }
                             $import = ImportService::makeImportEntity($cells);
 
-                            try {
-                                $em->persist($import);
-                                $em->flush();
-                            }catch(\Exception $e){
-                                $this->addFlash('danger', 'An error occured when saving data');
-                                return $this->redirectToRoute('import');
-                            }
+                            $em->persist($import);
+                            $em->flush();
                         }
                     }
                 } catch (Exception $e) {
-                    $this->addFlash('danger', 'Unabled to upload file');
+                    $this->addFlash('danger', 'An error occured when uploading file');
                     return $this->redirectToRoute('import');
                 }
 

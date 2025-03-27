@@ -20,6 +20,7 @@ To see in browser running pma, run http://localhost:8099, you should see import_
   
 # Run the app
 - npm run dev
+- php bin/console cache:clear
 - php bin/console symfony server:start
   
 # Enjoy
