@@ -19,6 +19,10 @@ To see in browser running pma, run http://localhost:8099, you should see import_
 - import the dump.sql in scripts repository
   
 # Run the app
+- npm run dev
 - php bin/console symfony server:start
-
+  
 # Enjoy
+
+## Once you have imported the file with no error, check pma to verify data in database
+
